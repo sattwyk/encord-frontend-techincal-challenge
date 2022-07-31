@@ -1,13 +1,9 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import './App.css';
-
-function App() {
-  const [count, setCount] = useState(0);
-
+function App(): JSX.Element {
   return (
-    <div className='App'>
-      <h1 className='text-3xl font-bold underline'>Hello world!</h1>
+    <div className='bg-slate-700'>
+      <h1 className='text-3xl text-red-300 font-bold underline'>
+        Hello world!
+      </h1>
     </div>
   );
 }
