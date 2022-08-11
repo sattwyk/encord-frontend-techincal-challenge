@@ -2,7 +2,14 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'hero-pattern': "url('./src/assets/background.jpg')",
+      },
+    },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
+  daisyui: {
+    themes: ['dark', 'light'],
+  },
 };

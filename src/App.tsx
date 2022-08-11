@@ -1,10 +1,22 @@
+import Button from './components/Button';
+import { useActive } from './hooks/useActive';
+
+import Nav from './components/Nav';
+import { Route, Routes } from 'react-router-dom';
+import ImageUploadContainer from './containers/ImageUploadContainer';
+import PredictionsContainer from './containers/PredictionsContainer';
+import Footer from './components/Footer';
+
 function App(): JSX.Element {
   return (
-    <div className='bg-slate-700'>
-      <h1 className='text-3xl text-red-300 font-bold underline'>
-        Hello world!
-      </h1>
-    </div>
+    <>
+      <Nav />
+      <Routes>
+        <Route path='/' element={<ImageUploadContainer />} />
+        <Route path='predictions' element={<PredictionsContainer />} />
+      </Routes>
+      <Footer />
+    </>
   );
 }
 
